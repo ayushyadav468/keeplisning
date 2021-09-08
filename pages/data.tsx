@@ -5,7 +5,6 @@ interface User {
 	name: string;
 	age: number;
 	gender: string;
-	image: string;
 	married: boolean;
 }
 
@@ -19,7 +18,7 @@ const DataPage = () => {
 				'1FwD9AdJ5dyzeodd75lf'
 			);
 			if (data.exists()) {
-				const userData = data.data();
+				const userData: User = data.data();
 				setUser(userData);
 				setLoading(false);
 			}
@@ -28,16 +27,18 @@ const DataPage = () => {
 	}, []);
 
 	if (loading) {
-		return <h1>Loading please wait...</h1>;
+		return (
+			<h1 style={{ marginTop: '5rem', textAlign: 'center', fontSize: '3rem' }}>
+				Loading please wait...
+			</h1>
+		);
 	}
 
 	return (
 		<div>
-			<p>{user?.name}</p>
-			<p>{user?.age}</p>
-			<p>{user?.gender}</p>
-			<p>{user?.married}</p>
-			<img src={user?.image} alt={user?.name} />
+			<pre style={{ marginTop: '5rem', textAlign: 'center', fontSize: '2rem' }}>
+				{JSON.stringify(user)}
+			</pre>
 		</div>
 	);
 };
