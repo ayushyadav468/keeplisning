@@ -5,7 +5,7 @@ const Navbar = () => {
 		<NavbarContainer>
 			<NavbarItems href='/data'>Data</NavbarItems>
 			<NavbarItems href='/about'>About</NavbarItems>
-			<NavbarItems href='/auth'>Authentication</NavbarItems>
+			<NavbarItems href='/login'>LogIn</NavbarItems>
 		</NavbarContainer>
 	);
 };

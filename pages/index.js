@@ -1,20 +1,10 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
-import Navbar from '../components/Navbar/Navbar';
-import styles from '../styles/Home.module.css';
+import Navbar from 'components/Navbar/Navbar';
+import styles from 'styles/Home.module.css';
 
-const Home: NextPage = () => {
+const Home = () => {
 	return (
 		<>
-			<Head>
-				<title>Keep Lisning</title>
-				<meta
-					name='description'
-					content='Now Listen to music without any ads or disturbance. You can also add offline music files stored on your device.'
-				/>
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
 			<Navbar />
 			<main className={styles.container}>
 				<h1 className={styles.heading}>Welcome to Keep Lisning</h1>

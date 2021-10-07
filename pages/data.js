@@ -1,16 +1,9 @@
 import { useState, useEffect } from 'react';
 import { readDatabase } from '../utils/firebase/firestoreDB';
 
-interface User {
-	name: string;
-	age: number;
-	gender: string;
-	married: boolean;
-}
-
 const DataPage = () => {
 	const [loading, setLoading] = useState(true);
-	const [user, setUser] = useState<User>();
+	const [user, setUser] = useState();
 	useEffect(() => {
 		const fetchData = async () => {
 			const data = await readDatabase(
@@ -18,7 +11,7 @@ const DataPage = () => {
 				'1FwD9AdJ5dyzeodd75lf'
 			);
 			if (data.exists()) {
-				const userData: User = data.data();
+				const userData = data.data();
 				setUser(userData);
 				setLoading(false);
 			}

@@ -31,6 +31,10 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     line-height: 1;
+    --main-bg: #0d0d0d;
+	  --secondary-bg: #2e2d36;
+	  --primary: #ffa501;
+    --secondary: #fe5404;
   }
   ol, ul {
     list-style: none;
