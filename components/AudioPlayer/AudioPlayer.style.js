@@ -44,9 +44,9 @@ export const ProgressBarWrapper = styled.div``;
 
 export const ProgressBar = styled.input`
 	--bar-bg: #2e2d36;
-	--seek-before-width: 100px;
+	--seek-before-width: 0;
 	--seek-before-color: #ffa501;
-	--knobby-color: #ffffff;
+	--knobby-color: #fff;
 
 	appearance: none;
 	background: var(--bar-bg);

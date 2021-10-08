@@ -1,9 +1,11 @@
 import { useState, useRef } from 'react';
+import Link from 'next/link';
 import {
 	Container,
 	Wrapper,
 	Logo,
 	Heading,
+	HomeLink,
 	Form,
 	Label,
 	Input,
@@ -42,8 +44,19 @@ const Index = () => {
 	return (
 		<Container>
 			<Wrapper>
-				<Logo src='/logo.svg' />
+				<Link href='/' passHref>
+					<HomeLink>
+						<Logo src='/logo.svg' />
+					</HomeLink>
+				</Link>
 				<Heading>Log in to KeepLisning</Heading>
+				<ContinueWithGoogle onClick={signInWithGoogleHandler}>
+					<FcGoogle
+						style={{ height: '24px', width: '24px', marginRight: '10px' }}
+					/>
+					Continue With Google
+				</ContinueWithGoogle>
+				<HorizontalLine></HorizontalLine>
 				<Form onSubmit={loginHandler}>
 					<Label labelName='Email'>
 						<Input
@@ -71,13 +84,6 @@ const Index = () => {
 					{"Don't have an account? "}{' '}
 					<SignUpLink href='/signup'>Signup</SignUpLink>
 				</Text>
-				<HorizontalLine></HorizontalLine>
-				<ContinueWithGoogle onClick={signInWithGoogleHandler}>
-					<FcGoogle
-						style={{ height: '24px', width: '24px', marginRight: '10px' }}
-					/>
-					Continue With Google
-				</ContinueWithGoogle>
 			</Wrapper>
 		</Container>
 	);

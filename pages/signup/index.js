@@ -1,9 +1,11 @@
 import { useState, useRef } from 'react';
+import Link from 'next/link';
 import {
 	Container,
 	Wrapper,
 	Logo,
 	Heading,
+	HomeLink,
 	Form,
 	Label,
 	Input,
@@ -40,7 +42,11 @@ const Index = () => {
 	return (
 		<Container>
 			<Wrapper>
-				<Logo src='/logo.svg' />
+				<Link href='/' passHref>
+					<HomeLink>
+						<Logo src='/logo.svg' />
+					</HomeLink>
+				</Link>
 				<Heading>Sign up to KeepLisning</Heading>
 				<Form onSubmit={sigupHandler}>
 					<Label labelName='Email'>

@@ -44,6 +44,7 @@ export const Form = styled.form`
 export const Label = styled.label`
 	width: 100%;
 	border: 1px solid #f0f0f0;
+	border-radius: 5px;
 	font-size: 1rem;
 	position: relative;
 	/* ${Input}:active &, ${Input}:focus & {
@@ -96,4 +97,8 @@ export const Text = styled.p`
 export const LoginLink = styled.a`
 	text-decoration: none;
 	color: var(--primary);
+`;
+
+export const HomeLink = styled.a`
+	text-decoration: none;
 `;

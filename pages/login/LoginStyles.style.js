@@ -56,6 +56,7 @@ export const Input = styled.input`
 export const Label = styled.label`
 	width: 100%;
 	border: 1px solid #f0f0f0;
+	border-radius: 5px;
 	font-size: 1rem;
 	position: relative;
 	&::before {
@@ -93,6 +94,10 @@ export const Text = styled.p`
 export const SignUpLink = styled.a`
 	text-decoration: none;
 	color: var(--primary);
+`;
+
+export const HomeLink = styled.a`
+	text-decoration: none;
 `;
 
 export const HorizontalLine = styled.div`
