@@ -1,20 +1,28 @@
 import { useState, useEffect, useRef } from 'react';
 import {
 	AudioPlayerContainer,
+	Wrapper,
 	ControlBtn,
 	PlayPauseBtn,
 	ProgressBarWrapper,
 	ProgressBar,
 	Text
 } from '@/component/AudioPlayer/AudioPlayer.style';
-import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
+import { MdRepeat, MdRepeatOne, MdShuffle } from 'react-icons/md';
 import { FaPlay, FaPause } from 'react-icons/fa';
+import {
+	IoMdRewind,
+	IoMdFastforward,
+	IoMdSkipBackward,
+	IoMdSkipForward
+} from 'react-icons/io';
 
-const AudioPlayer = () => {
+const AudioPlayer = ({ filePath }) => {
 	// State
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [duration, setDuration] = useState(0);
 	const [currentTime, setCurrentTime] = useState(0);
+	const [onRepeat, setOnRepeat] = useState(false);
 
 	// References
 	const audioPlayer = useRef();
@@ -49,6 +57,11 @@ const AudioPlayer = () => {
 		}
 	};
 
+	// Handle repeat a song
+	const repeatHandler = () => {
+		const preValue = onRepeat;
+		setOnRepeat(!preValue);
+	};
 	// Function keep track of current time of song
 	// and change the progress bar and current time
 	const whilePlaying = () => {
@@ -76,37 +89,38 @@ const AudioPlayer = () => {
 
 	// Make the song to go back 30s
 	const backThirty = () => {
-		progressBar.current.value = Number(progressBar.current.value) - 30;
+		progressBar.current.value = Number(progressBar.current.value) - 10;
 		changeRange();
 	};
 
 	// Make the song to go forward 30s
 	const forwardThirty = () => {
-		progressBar.current.value = Number(progressBar.current.value) + 30;
+		progressBar.current.value = Number(progressBar.current.value) + 10;
 		changeRange();
 	};
 
+	const controlBtnStyle = {
+		width: '25px',
+		height: '25px',
+		color: 'white'
+	};
+
 	return (
-		<div
-			style={{
-				width: '100%',
-				minHeight: '100vh',
-				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
-				backgroundColor: '#2E2D36'
-			}}
-		>
-			<AudioPlayerContainer>
-				<audio
-					src='/KaunTujhe.mp3'
-					preload='metadata'
-					ref={audioPlayer}
-				></audio>
+		<AudioPlayerContainer>
+			<Wrapper>
+				<audio src={filePath} preload='metadata' ref={audioPlayer}></audio>
+				<ControlBtn onClick={repeatHandler}>
+					{onRepeat ? (
+						<MdRepeatOne style={controlBtnStyle} />
+					) : (
+						<MdRepeat style={controlBtnStyle} />
+					)}
+				</ControlBtn>
+				<ControlBtn>
+					<IoMdSkipBackward style={controlBtnStyle} />
+				</ControlBtn>
 				<ControlBtn onClick={backThirty}>
-					<BsArrowLeftShort
-						style={{ width: '30px', height: '30px', color: 'white' }}
-					/>
+					<IoMdRewind style={controlBtnStyle} />
 				</ControlBtn>
 				<PlayPauseBtn onClick={togglePlayPause}>
 					{isPlaying ? (
@@ -118,11 +132,16 @@ const AudioPlayer = () => {
 					)}
 				</PlayPauseBtn>
 				<ControlBtn onClick={forwardThirty}>
-					<BsArrowRightShort
-						style={{ width: '30px', height: '30px', color: 'white' }}
-					/>
+					<IoMdFastforward style={controlBtnStyle} />
 				</ControlBtn>
-
+				<ControlBtn>
+					<IoMdSkipForward style={controlBtnStyle} />
+				</ControlBtn>
+				<ControlBtn>
+					<MdShuffle style={controlBtnStyle} />
+				</ControlBtn>
+			</Wrapper>
+			<Wrapper>
 				{/* Current Time */}
 				<Text>{calculateTime(currentTime)}</Text>
 				{/* Progress Bar */}
@@ -136,8 +155,8 @@ const AudioPlayer = () => {
 				</ProgressBarWrapper>
 				{/* Duration */}
 				<Text>{duration && !isNaN(duration) && calculateTime(duration)}</Text>
-			</AudioPlayerContainer>
-		</div>
+			</Wrapper>
+		</AudioPlayerContainer>
 	);
 };
 

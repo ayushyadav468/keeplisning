@@ -30,11 +30,14 @@ export const GlobalStyle = createGlobalStyle`
     display: block;
   }
   body {
-    line-height: 1;
     --main-bg: #0d0d0d;
-	  --secondary-bg: #2e2d36;
-	  --primary: #ffa501;
+    --secondary-bg: #1d1c24;
+    --secondary-lt-bg: #2e2d36;
+    --primary: #ffa501;
     --secondary: #fe5404;
+    --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    
+    line-height: 1;
   }
   ol, ul {
     list-style: none;

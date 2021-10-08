@@ -2,11 +2,22 @@ import styled from 'styled-components';
 
 export const AudioPlayerContainer = styled.div`
 	width: 100%;
-	padding: 2rem 3rem;
+	padding: 0.5rem 2rem;
+	box-sizing: border-box;
 	display: flex;
+	flex-flow: column;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--main-bg);
+`;
+
+export const Wrapper = styled.div`
+	width: 100%;
+	padding: 1rem 0;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
 `;
 
 export const ControlBtn = styled.button`
@@ -20,10 +31,15 @@ export const ControlBtn = styled.button`
 	cursor: pointer;
 	background: none;
 	border: none;
+	border-radius: 50%;
+	&:hover,
+	&:active,
+	&:focus {
+		background: var(--secondary-bg);
+	}
 `;
 
 export const PlayPauseBtn = styled.button`
-	--gradient: linear-gradient(135deg, #ffa501 0%, #fe5404 100%);
 	width: 50px;
 	height: 50px;
 	background: var(--gradient);
@@ -40,7 +56,10 @@ export const Text = styled.p`
 	color: white;
 `;
 
-export const ProgressBarWrapper = styled.div``;
+export const ProgressBarWrapper = styled.div`
+	width: 80%;
+	/* margin: 0 1.5rem; */
+`;
 
 export const ProgressBar = styled.input`
 	--bar-bg: #2e2d36;
@@ -54,6 +73,7 @@ export const ProgressBar = styled.input`
 	width: 100%;
 	height: 11px;
 	outline: none;
+	cursor: pointer;
 	position: relative;
 	/* progress bar - safari */
 	&::-w--knobby-colorr-runnable-track {
@@ -81,8 +101,7 @@ export const ProgressBar = styled.input`
 		height: 11px;
 		width: var(--seek-before-width);
 		background-color: var(--seek-before-color);
-		border-top-left-radius: 10px;
-		border-bottom-left-radius: 10px;
+		border-radius: 10px;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -91,8 +110,7 @@ export const ProgressBar = styled.input`
 	}
 	&::-moz-range-progress {
 		background-color: var(--seek-before-color);
-		border-top-left-radius: 10px;
-		border-bottom-left-radius: 10px;
+		border-radius: 10px;
 		height: 11px;
 	}
 	&::-webkit-slider-thumb {
@@ -107,9 +125,10 @@ export const ProgressBar = styled.input`
 		margin: -2px 0 0 0;
 		z-index: 3;
 		box-sizing: border-box;
+		transform: scale(1.1);
 	}
 	&:active::-webkit-slider-thumb {
-		transform: scale(1.2);
+		transform: scale(1.3);
 		background: var(--knobby-color);
 	}
 	&::-moz-range-thumb {
@@ -122,9 +141,10 @@ export const ProgressBar = styled.input`
 		position: relative;
 		z-index: 3;
 		box-sizing: border-box;
+		transform: scale(1.1);
 	}
 	&:active::-moz-range-thumb {
-		transform: scale(1.2);
+		transform: scale(1.3);
 		background: var(--knobby-color);
 	}
 `;
