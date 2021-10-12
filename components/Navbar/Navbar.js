@@ -1,11 +1,33 @@
-import { NavbarContainer, NavbarItems } from './Navbar.style';
+import Link from 'next/link';
+import {
+	NavbarContainer,
+	LogoContainer,
+	NavbarLinksContainer,
+	Logo,
+	NavbarItems
+} from './Navbar.style';
 
 const Navbar = () => {
 	return (
 		<NavbarContainer>
-			<NavbarItems href='/data'>Data</NavbarItems>
-			<NavbarItems href='/about'>About</NavbarItems>
-			<NavbarItems href='/login'>LogIn</NavbarItems>
+			<LogoContainer>
+				<Link href='/' passHref>
+					<NavbarItems>
+						<Logo src='/logo.svg' alt='logo' />
+					</NavbarItems>
+				</Link>
+			</LogoContainer>
+			<NavbarLinksContainer>
+				<Link href='/player' passHref>
+					<NavbarItems>Player</NavbarItems>
+				</Link>
+				<Link href='/about' passHref>
+					<NavbarItems>About</NavbarItems>
+				</Link>
+				<Link href='/login' passHref>
+					<NavbarItems>Login | Sign Up</NavbarItems>
+				</Link>
+			</NavbarLinksContainer>
 		</NavbarContainer>
 	);
 };

@@ -3,10 +3,26 @@ import styled from 'styled-components';
 export const NavbarContainer = styled.nav`
 	width: 100%;
 	min-height: 8vh;
-	background-color: lightblue;
+	padding: 1.5rem 6rem;
+	color: #fff;
+	background-color: var(--main-bg);
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	z-index: 10;
+`;
+
+export const LogoContainer = styled.div`
+	width: max-content;
+`;
+
+export const NavbarLinksContainer = styled.div`
+	width: 40%;
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-end;
 	align-items: center;
 `;
 
@@ -14,7 +30,16 @@ export const NavbarItems = styled.a`
 	cursor: pointer;
 	font-size: 1.3em;
 	font-weight: normal;
-	margin: 0.5rem 1rem;
-	color: black;
+	color: #fff;
+	margin: 0.5rem 0 0.5rem 4rem;
 	text-decoration: none;
+	&:active,
+	&:focus,
+	&:hover {
+		color: var(--primary);
+	}
+`;
+
+export const Logo = styled.img`
+	width: 20px;
 `;
