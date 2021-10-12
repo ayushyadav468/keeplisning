@@ -8,6 +8,8 @@ export const Container = styled.div`
 	flex-flow: column;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
+	z-index: 10;
 `;
 
 export const LinkComponent = styled.a`
@@ -34,7 +36,7 @@ export const UserLink = styled.a`
 `;
 
 export const Navbar = styled.ul`
-	padding: 2rem 1.5rem;
+	padding: 2rem 0.8rem;
 	display: flex;
 	flex-flow: column;
 	gap: 2.5rem;
@@ -53,4 +55,12 @@ export const NavbarItem = styled.li`
 	&:focus {
 		background: var(--gradient);
 	}
+`;
+
+export const ActiveNavbarItem = styled.li`
+	list-style: none;
+	cursor: pointer;
+	padding: 0.8rem;
+	border-radius: 8px;
+	background: var(--gradient);
 `;

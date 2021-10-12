@@ -1,8 +1,10 @@
+import { DropContainer, Heading } from './Drop.style';
+
 const Dropzone = () => {
 	return (
-		<div style={{ color: 'white' }}>
-			<h1>Dropzone</h1>
-		</div>
+		<DropContainer>
+			<Heading>Drop you music */.mp3 files here.</Heading>
+		</DropContainer>
 	);
 };
 

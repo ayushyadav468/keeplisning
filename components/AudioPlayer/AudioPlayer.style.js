@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
 export const AudioPlayerContainer = styled.div`
-	width: 100%;
+	width: 92%;
 	padding: 0.5rem 2rem;
 	box-sizing: border-box;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
 	align-items: center;
+	background: var(--main-bg);
+	position: absolute;
+	bottom: 0;
+	right: 0;
 `;
 
 export const Wrapper = styled.div`

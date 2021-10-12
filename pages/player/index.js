@@ -9,8 +9,7 @@ import {
 	GridContainer,
 	SideBarContainer,
 	PlayerNavbarContainer,
-	MainContainer,
-	PlayerContainer
+	MainContainer
 } from './Index.style';
 
 const Index = () => {
@@ -33,9 +32,7 @@ const Index = () => {
 				<PlayerNavbar changeHome={homeChangeHandler} />
 			</PlayerNavbarContainer> */}
 			<MainContainer>{isHome ? <PlayerMain /> : <Drop />}</MainContainer>
-			<PlayerContainer>
-				<AudioPlayer filePath={'/KaunTujhe.mp3'} />
-			</PlayerContainer>
+			<AudioPlayer filePath={'/RaataanLambiyan.mp3'} />
 		</GridContainer>
 	);
 };

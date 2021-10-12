@@ -36,6 +36,8 @@ export const GlobalStyle = createGlobalStyle`
     --primary: #ffa501;
     --secondary: #fe5404;
     --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    --gradient-lt: linear-gradient(90deg,rgba(255,165,1,0.8) 0%, rgba(254,84,4,0.8) 100%);
+    --gradient-ltst: linear-gradient(90deg,rgba(255,165,1,0) 0%, rgba(254,84,4,0) 100%);
     
     line-height: 1;
   }

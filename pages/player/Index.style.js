@@ -2,21 +2,21 @@ import styled from 'styled-components';
 
 export const GridContainer = styled.main`
 	width: 100%;
-	min-height: 100vh;
-	overflow: hidden;
+	height: 100vh;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	color: white;
 	background-color: var(--main-bg);
 	display: grid;
-	grid-template-columns: 12% auto;
-	grid-template-rows: 12% auto auto 20%;
+	grid-template-columns: 8% auto;
+	grid-template-rows: 8% auto auto 20%;
 	grid-template-areas:
 		'sidebar main main main'
 		'sidebar main main main'
 		'sidebar main main main'
-		'sidebar player player player';
+		'sidebar main main main';
+	overflow: hidden;
 `;
 
 export const SideBarContainer = styled.section`
@@ -33,9 +33,4 @@ export const PlayerNavbarContainer = styled.section`
 export const MainContainer = styled.section`
 	width: 100%;
 	grid-area: main;
-`;
-
-export const PlayerContainer = styled.section`
-	width: 100%;
-	grid-area: player;
 `;

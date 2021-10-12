@@ -8,6 +8,7 @@ import {
 	Logo,
 	MainContent,
 	Card,
+	ActiveCard,
 	SongImage,
 	SongDetail,
 	SongName,
@@ -27,8 +28,88 @@ const PlayerMain = () => {
 			</Welcome>
 			<Heading>Files</Heading>
 			<MainContent>
-				<Card>
+				<ActiveCard>
 					<SongImage src='/DefaultSongImage.png' alt='Song Image' />
+					<SongDetail>
+						<SongName>Kaun Tujhe</SongName>
+						<SongBy>Arijit Singh</SongBy>
+					</SongDetail>
+					<SongDuration>03:42</SongDuration>
+				</ActiveCard>
+				<Card>
+					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongDetail>
+						<SongName>Kaun Tujhe</SongName>
+						<SongBy>Arijit Singh</SongBy>
+					</SongDetail>
+					<SongDuration>03:42</SongDuration>
+				</Card>
+				<Card>
+					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongDetail>
+						<SongName>Kaun Tujhe</SongName>
+						<SongBy>Arijit Singh</SongBy>
+					</SongDetail>
+					<SongDuration>03:42</SongDuration>
+				</Card>
+				<Card>
+					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongDetail>
+						<SongName>Kaun Tujhe</SongName>
+						<SongBy>Arijit Singh</SongBy>
+					</SongDetail>
+					<SongDuration>03:42</SongDuration>
+				</Card>
+				<Card>
+					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongDetail>
+						<SongName>Kaun Tujhe</SongName>
+						<SongBy>Arijit Singh</SongBy>
+					</SongDetail>
+					<SongDuration>03:42</SongDuration>
+				</Card>
+				<Card>
+					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongDetail>
+						<SongName>Kaun Tujhe</SongName>
+						<SongBy>Arijit Singh</SongBy>
+					</SongDetail>
+					<SongDuration>03:42</SongDuration>
+				</Card>
+				<Card>
+					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongDetail>
+						<SongName>Kaun Tujhe</SongName>
+						<SongBy>Arijit Singh</SongBy>
+					</SongDetail>
+					<SongDuration>03:42</SongDuration>
+				</Card>
+				<Card>
+					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongDetail>
+						<SongName>Kaun Tujhe</SongName>
+						<SongBy>Arijit Singh</SongBy>
+					</SongDetail>
+					<SongDuration>03:42</SongDuration>
+				</Card>
+				<Card>
+					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongDetail>
+						<SongName>Kaun Tujhe</SongName>
+						<SongBy>Arijit Singh</SongBy>
+					</SongDetail>
+					<SongDuration>03:42</SongDuration>
+				</Card>
+				<Card>
+					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongDetail>
+						<SongName>Kaun Tujhe</SongName>
+						<SongBy>Arijit Singh</SongBy>
+					</SongDetail>
+					<SongDuration>03:42</SongDuration>
+				</Card>
+				<Card>
+					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
