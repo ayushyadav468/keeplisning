@@ -39,11 +39,13 @@ export const ContentContainer = styled.div`
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 `;
 
 export const ContentWrapper = styled.div`
 	width: 70%;
+	margin-right: auto;
+	margin-left: 2rem;
 	text-align: left;
 `;
 
@@ -68,10 +70,12 @@ export const TagLine = styled.p`
 	line-height: 1.2;
 `;
 
-export const ActionBtn = styled.button`
+export const ActionBtn = styled.a`
+	text-decoration: none;
+	display: inline-block;
 	margin-top: 3rem;
 	font-size: 1.25em;
-	padding: 0.68rem 3rem;
+	padding: 0.8rem 2.5rem;
 	color: #fff;
 	background: var(--gradient);
 	border: none;

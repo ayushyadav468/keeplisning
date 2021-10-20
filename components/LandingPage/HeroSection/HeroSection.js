@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
 	MainContainer,
 	RenderContainer,
@@ -23,7 +24,9 @@ const HeroSection = () => {
 					<Heading>Listening is everything</Heading>
 					<SubHeading>A place only for music</SubHeading>
 					<TagLine>No Ads, No Disturbance</TagLine>
-					<ActionBtn>Player</ActionBtn>
+					<Link href='/player' passHref>
+						<ActionBtn>Player</ActionBtn>
+					</Link>
 				</ContentWrapper>
 			</ContentContainer>
 		</MainContainer>

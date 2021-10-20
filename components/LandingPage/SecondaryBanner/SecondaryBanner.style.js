@@ -39,10 +39,12 @@ export const BannerImage = styled.img`
 	border-right: 10px;
 `;
 
-export const ActionBtn = styled.button`
+export const ActionBtn = styled.a`
+	text-decoration: none;
+	display: inline-block;
 	margin-top: 3rem;
 	font-size: 1.25em;
-	padding: 0.68rem 3rem;
+	padding: 0.8rem 2.5rem;
 	color: #fff;
 	background: var(--gradient);
 	border: none;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const NavbarContainer = styled.nav`
 	width: 100%;
 	min-height: 8vh;
-	padding: 1.5rem 6rem;
+	padding: 1.5rem 8rem;
 	color: #fff;
 	background-color: var(--main-bg);
 	display: flex;
@@ -14,7 +14,8 @@ export const NavbarContainer = styled.nav`
 	z-index: 10;
 `;
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled.a`
+	text-decoration: none;
 	width: max-content;
 `;
 
@@ -28,7 +29,7 @@ export const NavbarLinksContainer = styled.div`
 
 export const NavbarItems = styled.a`
 	cursor: pointer;
-	font-size: 1.3em;
+	font-size: 1.125em;
 	font-weight: normal;
 	color: #fff;
 	margin: 0.5rem 0 0.5rem 4rem;
@@ -41,5 +42,5 @@ export const NavbarItems = styled.a`
 `;
 
 export const Logo = styled.img`
-	width: 20px;
+	width: 25px;
 `;

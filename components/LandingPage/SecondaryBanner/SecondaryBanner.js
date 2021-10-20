@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Link from 'next/link';
 import {
 	MainContainer,
 	Heading,
@@ -17,7 +17,9 @@ const SecondaryBanner = () => {
 			</TagLine>
 			<ImageContainer>
 				<BannerImage src='/SecondaryBanner.png' alt='Banner' />
-				<ActionBtn>Player</ActionBtn>
+				<Link href='/player' passHref>
+					<ActionBtn>Player</ActionBtn>
+				</Link>
 			</ImageContainer>
 		</MainContainer>
 	);

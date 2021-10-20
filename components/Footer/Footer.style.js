@@ -4,8 +4,8 @@ export const FooterContainer = styled.footer`
 	width: 100%;
 	color: #fff;
 	background: rgba(0, 0, 0, 0.9);
-	min-height: 35vh;
-	padding: 2rem 3rem;
+	min-height: 45vh;
+	padding: 5rem;
 	display: flex;
 	flex-flow: row;
 	justify-content: space-between;
@@ -13,11 +13,14 @@ export const FooterContainer = styled.footer`
 `;
 
 export const FooterWrapper = styled.div`
-	width: 30%;
+	width: 20%;
 	padding-left: ${(props) => props.paddingLeft + 'rem' || 0};
 	display: flex;
 	flex-flow: column;
 	align-items: left;
+	&:first-child {
+		width: 40%;
+	}
 `;
 
 export const FooterHeading = styled.h2`
@@ -42,21 +45,28 @@ export const FooterLink = styled.a`
 	font-weight: 400;
 	position: relative;
 	text-align: left;
-	&:active,
-	&:focus,
-	&:hover {
-		color: var(--primary);
-	}
+	transition: all 0.3s ease-in;
 	&::before {
 		content: '';
-		width: 7px;
-		height: 7px;
+		width: 8px;
+		height: 8px;
 		background-color: #fff;
 		list-style: square;
 		font-size: 1.5em;
 		position: absolute;
 		top: 50%;
-		left: -5%;
+		left: -10%;
 		transform: translateY(-50%);
+	}
+	&:active,
+	&:focus,
+	&:hover {
+		color: var(--primary);
+		transform: translateX(10px);
+	}
+	&:active::before,
+	&:focus::before,
+	&:hover::before {
+		background-color: var(--primary);
 	}
 `;

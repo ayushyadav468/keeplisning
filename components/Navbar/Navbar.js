@@ -10,13 +10,11 @@ import {
 const Navbar = () => {
 	return (
 		<NavbarContainer>
-			<LogoContainer>
-				<Link href='/' passHref>
-					<NavbarItems>
-						<Logo src='/logo.svg' alt='logo' />
-					</NavbarItems>
-				</Link>
-			</LogoContainer>
+			<Link href='/' passHref>
+				<LogoContainer>
+					<Logo src='/logo.svg' alt='logo' />
+				</LogoContainer>
+			</Link>
 			<NavbarLinksContainer>
 				<Link href='/player' passHref>
 					<NavbarItems>Player</NavbarItems>

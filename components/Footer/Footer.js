@@ -18,7 +18,7 @@ const Footer = () => {
 					}
 				</FooterContent>
 			</FooterWrapper>
-			<FooterWrapper paddingLeft={5}>
+			<FooterWrapper>
 				<FooterHeading>Contact</FooterHeading>
 				<Link href='/' passHref>
 					<FooterLink>Linkedin</FooterLink>
@@ -27,7 +27,7 @@ const Footer = () => {
 					<FooterLink>Twitter</FooterLink>
 				</Link>
 			</FooterWrapper>
-			<FooterWrapper paddingLeft={5}>
+			<FooterWrapper>
 				<FooterHeading>Links</FooterHeading>
 				<Link href='/player' passHref>
 					<FooterLink>Player</FooterLink>
