@@ -12,7 +12,7 @@ const Navbar = () => {
 		<NavbarContainer>
 			<Link href='/' passHref>
 				<LogoContainer>
-					<Logo src='/logo.svg' alt='logo' />
+					<Logo src='/images/logo.svg' alt='logo' />
 				</LogoContainer>
 			</Link>
 			<NavbarLinksContainer>

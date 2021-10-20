@@ -13,6 +13,22 @@ export default function MyApp({ Component, pageProps }) {
 					content='Now Listen to music without any ads or disturbance. You can also add offline music files stored on your device.'
 				/>
 				<link rel='icon' href='/favicon/favicon.ico' />
+				<link rel='manifest' href='/manifest.json' />
+				<link
+					href='/favicon/favicon-16x16.png'
+					rel='icon'
+					type='image/png'
+					sizes='16x16'
+				/>
+				<link
+					href='/favicon/favicon-32x32.png'
+					rel='icon'
+					type='image/png'
+					sizes='32x32'
+				/>
+				<link rel='apple-touch-icon' href='/favicon/apple-icon.png'></link>
+				<meta name='theme-color' content='#ffa501' />
+				<meta name='background-color' content='#0d0d0d' />
 			</Head>
 			{/* <Script
 				strategy='lazyOnload'

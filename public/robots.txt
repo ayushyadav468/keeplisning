@@ -1,0 +1,8 @@
+user-agent: *
+disallow: /downloads/
+
+user-agent: magicsearchbot
+disallow: /uploads/
+
+Sitemap: https://keeplisning.com/sitemap.xml
+Sitemap: https://www.keeplisning.com/sitemap.xml

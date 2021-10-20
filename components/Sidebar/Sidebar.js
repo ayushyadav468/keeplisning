@@ -39,7 +39,7 @@ const Sidebar = ({ changeHome }) => {
 		<Container>
 			<Link href='/' passHref>
 				<LinkComponent>
-					<ImageComponent src='/logo.svg' />
+					<ImageComponent src='/images/logo.svg' />
 				</LinkComponent>
 			</Link>
 			<Navbar>

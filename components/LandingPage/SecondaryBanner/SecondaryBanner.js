@@ -16,7 +16,7 @@ const SecondaryBanner = () => {
 				Just drop your music file (*/.mp3 & */.mp4) into the player
 			</TagLine>
 			<ImageContainer>
-				<BannerImage src='/SecondaryBanner.png' alt='Banner' />
+				<BannerImage src='/images/SecondaryBanner.png' alt='Banner' />
 				<Link href='/player' passHref>
 					<ActionBtn>Player</ActionBtn>
 				</Link>

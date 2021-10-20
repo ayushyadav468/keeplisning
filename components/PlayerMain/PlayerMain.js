@@ -24,12 +24,12 @@ const PlayerMain = () => {
 					<Heading>Welcome to Keeplisning</Heading>
 					<SubHeading>No ads, No worries, Only music</SubHeading>
 				</ContentWrapper>
-				<Logo src='/logo.svg' />
+				<Logo src='/images/logo.svg' />
 			</Welcome>
 			<Heading>Files</Heading>
 			<MainContent>
 				<ActiveCard>
-					<SongImage src='/DefaultSongImage.png' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.png' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -37,7 +37,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</ActiveCard>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -45,7 +45,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -53,7 +53,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -61,7 +61,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -69,7 +69,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -77,7 +77,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -85,7 +85,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -93,7 +93,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -101,7 +101,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -109,7 +109,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -117,7 +117,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -125,7 +125,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -133,7 +133,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -141,7 +141,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>
@@ -149,7 +149,7 @@ const PlayerMain = () => {
 					<SongDuration>03:42</SongDuration>
 				</Card>
 				<Card>
-					<SongImage src='/DefaultSongImage.svg' alt='Song Image' />
+					<SongImage src='/images/DefaultSongImage.svg' alt='Song Image' />
 					<SongDetail>
 						<SongName>Kaun Tujhe</SongName>
 						<SongBy>Arijit Singh</SongBy>

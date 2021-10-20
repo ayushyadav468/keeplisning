@@ -16,7 +16,7 @@ const HeroSection = () => {
 	return (
 		<MainContainer>
 			<RenderContainer>
-				<RenderImage src='/Mockup.png' alt='Mockup' />
+				<RenderImage src='/images/Mockup.png' alt='Mockup' />
 				<RenderShadow></RenderShadow>
 			</RenderContainer>
 			<ContentContainer>
