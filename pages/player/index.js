@@ -10,7 +10,7 @@ import {
 	SideBarContainer,
 	PlayerNavbarContainer,
 	MainContainer
-} from './Index.style';
+} from 'styles/Index.style';
 
 const Index = () => {
 	// Home section or drop zone section

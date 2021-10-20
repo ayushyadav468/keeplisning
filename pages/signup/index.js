@@ -12,7 +12,7 @@ import {
 	LoginBtn,
 	Text,
 	LoginLink
-} from 'pages/signup/SignupStyles.style';
+} from 'styles/SignupStyles.style';
 
 const Index = () => {
 	// States

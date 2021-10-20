@@ -14,7 +14,7 @@ import {
 	SignUpLink,
 	HorizontalLine,
 	ContinueWithGoogle
-} from 'pages/login/LoginStyles.style';
+} from 'styles/LoginStyles.style';
 import { FcGoogle } from 'react-icons/fc';
 
 const Index = () => {

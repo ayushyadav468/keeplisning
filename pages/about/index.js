@@ -7,7 +7,7 @@ import {
 	Content,
 	LinkContainer,
 	ContactLink
-} from './AboutStyles.style';
+} from 'styles/AboutStyles.style';
 
 const Index = () => {
 	return (
