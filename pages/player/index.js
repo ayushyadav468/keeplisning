@@ -1,4 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import axios from 'utils/axiosInstance';
+
 import Sidebar from '@/component/Sidebar/Sidebar';
 import PlayerNavbar from '@/component/PlayerNavbar/PlayerNavbar';
 import Drop from '@/component/Drop/Drop';
@@ -13,6 +16,22 @@ import {
 } from 'styles/Index.style';
 
 const Index = () => {
+	const router = useRouter();
+	const code = router.query.code; // SpotifyCode
+
+	useEffect(() => {
+		if (code) {
+			axios
+				.post('/auth/login', {
+					code
+				})
+				.then((data) => console.log(data))
+				.catch((error) => console.log(error));
+		}
+		router.push('/player'); // Change url to /player
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [code]);
+
 	// Home section or drop zone section
 	const [isHome, setIsHome] = useState(true);
 
@@ -32,7 +51,7 @@ const Index = () => {
 				<PlayerNavbar changeHome={homeChangeHandler} />
 			</PlayerNavbarContainer> */}
 			<MainContainer>{isHome ? <PlayerMain /> : <Drop />}</MainContainer>
-			<AudioPlayer filePath={'/RaataanLambiyan.mp3'} />
+			<AudioPlayer currentSong={'/RaataanLambiyan.mp3'} />
 		</GridContainer>
 	);
 };

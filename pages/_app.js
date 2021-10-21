@@ -7,11 +7,6 @@ export default function MyApp({ Component, pageProps }) {
 		<>
 			<Head>
 				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-				<title>Keep Lisning</title>
-				<meta
-					name='description'
-					content='Now Listen to music without any ads or disturbance. You can also add offline music files stored on your device.'
-				/>
 				<link rel='icon' href='/favicon/favicon.ico' />
 				<link rel='manifest' href='/manifest.json' />
 				<link
@@ -29,6 +24,15 @@ export default function MyApp({ Component, pageProps }) {
 				<link rel='apple-touch-icon' href='/favicon/apple-icon.png'></link>
 				<meta name='theme-color' content='#ffa501' />
 				<meta name='background-color' content='#0d0d0d' />
+				{/* <meta
+					httpEquiv='Content-Security-Policy'
+					content="default-src 'self'; child-src 'none';"
+				/> */}
+				<meta
+					name='description'
+					content='Now Listen to music without any ads or disturbance. You can also add offline music files stored on your device.'
+				/>
+				<title>Keep Lisning</title>
 			</Head>
 			{/* <Script
 				strategy='lazyOnload'

@@ -7,7 +7,7 @@ import {
 	ProgressBarWrapper,
 	ProgressBar,
 	Text
-} from '@/component/AudioPlayer/AudioPlayer.style';
+} from './AudioPlayer.style';
 import { MdRepeat, MdRepeatOne, MdShuffle } from 'react-icons/md';
 import { FaPlay, FaPause } from 'react-icons/fa';
 import {
@@ -17,7 +17,7 @@ import {
 	IoMdSkipForward
 } from 'react-icons/io';
 
-const AudioPlayer = ({ filePath }) => {
+const AudioPlayer = ({ currentSong }) => {
 	// State
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [duration, setDuration] = useState(0);
@@ -108,7 +108,7 @@ const AudioPlayer = ({ filePath }) => {
 	return (
 		<AudioPlayerContainer>
 			<Wrapper>
-				<audio src={filePath} preload='metadata' ref={audioPlayer}></audio>
+				<audio src={currentSong} preload='metadata' ref={audioPlayer}></audio>
 				<ControlBtn onClick={repeatHandler}>
 					{onRepeat ? (
 						<MdRepeatOne style={controlBtnStyle} />

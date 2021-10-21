@@ -119,7 +119,8 @@ export const HorizontalLine = styled.div`
 	}
 `;
 
-export const ContinueWithGoogle = styled.button`
+export const ContinueWithSpotify = styled.a`
+	text-decoration: none;
 	border: 1px solid var(--primary);
 	color: white;
 	background-color: var(--secondary-bg);

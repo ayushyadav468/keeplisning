@@ -9,6 +9,7 @@ export const DropContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 	&:hover {
 		border: 2px dashed var(--primary);
 	}

@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import Link from 'next/link';
+
 import {
 	Container,
 	Wrapper,
@@ -13,9 +14,9 @@ import {
 	Text,
 	SignUpLink,
 	HorizontalLine,
-	ContinueWithGoogle
+	ContinueWithSpotify
 } from 'styles/LoginStyles.style';
-import { FcGoogle } from 'react-icons/fc';
+import { FaSpotify } from 'react-icons/fa';
 
 const Index = () => {
 	// States
@@ -39,23 +40,32 @@ const Index = () => {
 		}, 3000);
 	};
 
-	const signInWithGoogleHandler = () => {};
+	const client_id = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID;
+	const response_type = 'code';
+	const redirect_uri = process.env.NEXT_PUBLIC_SPOTIFY_REDIRECT_URL;
+	const scope =
+		'streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state';
 
 	return (
 		<Container>
 			<Wrapper>
 				<Link href='/' passHref>
 					<HomeLink>
-						<Logo src='/logo.svg' />
+						<Logo src='images/logo.svg' />
 					</HomeLink>
 				</Link>
 				<Heading>Log in to KeepLisning</Heading>
-				<ContinueWithGoogle onClick={signInWithGoogleHandler}>
-					<FcGoogle
-						style={{ height: '24px', width: '24px', marginRight: '10px' }}
-					/>
-					Continue With Google
-				</ContinueWithGoogle>
+				<Link
+					href={`https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=${response_type}&redirect_uri=${redirect_uri}&scope=${scope}`}
+					passHref
+				>
+					<ContinueWithSpotify>
+						<FaSpotify
+							style={{ height: '24px', width: '24px', marginRight: '10px' }}
+						/>
+						Continue With Spotify
+					</ContinueWithSpotify>
+				</Link>
 				<HorizontalLine></HorizontalLine>
 				<Form onSubmit={loginHandler}>
 					<Label labelName='Email'>

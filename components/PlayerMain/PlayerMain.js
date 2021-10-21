@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import {
 	Container,
 	Welcome,
@@ -27,7 +27,7 @@ const PlayerMain = () => {
 				<Logo src='/images/logo.svg' />
 			</Welcome>
 			<Heading>Files</Heading>
-			<MainContent>
+			{/* <MainContent>
 				<ActiveCard>
 					<SongImage src='/images/DefaultSongImage.png' alt='Song Image' />
 					<SongDetail>
@@ -156,7 +156,7 @@ const PlayerMain = () => {
 					</SongDetail>
 					<SongDuration>03:42</SongDuration>
 				</Card>
-			</MainContent>
+			</MainContent> */}
 		</Container>
 	);
 };
