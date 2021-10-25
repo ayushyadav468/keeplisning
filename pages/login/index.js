@@ -23,28 +23,40 @@ const Index = () => {
 	const [error, setError] = useState('');
 
 	// Input References
-	const emailRef = useRef(null);
-	const passwordRef = useRef(null);
+	// const emailRef = useRef(null);
+	// const passwordRef = useRef(null);
 
-	const loginHandler = (event) => {
-		event.preventDefault();
-		if (emailRef.current.value && passwordRef.current.value) {
-			const email = emailRef.current.value;
-			const password = passwordRef.current.value;
-			console.log(email, password);
-		} else {
-			setError('Some Error Occured');
-		}
-		setTimeout(() => {
-			setError('');
-		}, 3000);
-	};
+	// const loginHandler = (event) => {
+	// 	event.preventDefault();
+	// 	if (emailRef.current.value && passwordRef.current.value) {
+	// 		const email = emailRef.current.value;
+	// 		const password = passwordRef.current.value;
+	// 		console.log(email, password);
+	// 	} else {
+	// 		setError('Some Error Occured');
+	// 	}
+	// 	setTimeout(() => {
+	// 		setError('');
+	// 	}, 3000);
+	// };
 
 	const client_id = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID;
 	const response_type = 'code';
 	const redirect_uri = process.env.NEXT_PUBLIC_SPOTIFY_REDIRECT_URL;
-	const scope =
-		'streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state';
+	// Scope for spotify user
+	// Scope determine what data can be read in respect to user
+	const scope = [
+		'streaming',
+		'user-read-email',
+		'user-read-private',
+		'user-library-read',
+		'user-library-modify',
+		'user-read-playback-state',
+		'user-modify-playback-state'
+	].join(' ');
+	// URL to login to spotify with above properties
+	// This return a code in search params
+	const spotifyURL = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=${response_type}&redirect_uri=${redirect_uri}&scope=${scope}`;
 
 	return (
 		<Container>
@@ -55,10 +67,7 @@ const Index = () => {
 					</HomeLink>
 				</Link>
 				<Heading>Log in to KeepLisning</Heading>
-				<Link
-					href={`https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=${response_type}&redirect_uri=${redirect_uri}&scope=${scope}`}
-					passHref
-				>
+				<Link href={spotifyURL} passHref>
 					<ContinueWithSpotify>
 						<FaSpotify
 							style={{ height: '24px', width: '24px', marginRight: '10px' }}
@@ -66,7 +75,7 @@ const Index = () => {
 						Continue With Spotify
 					</ContinueWithSpotify>
 				</Link>
-				<HorizontalLine></HorizontalLine>
+				{/* <HorizontalLine></HorizontalLine>
 				<Form onSubmit={loginHandler}>
 					<Label labelName='Email'>
 						<Input
@@ -85,15 +94,15 @@ const Index = () => {
 							inputLabel='Password'
 							required
 						/>
-					</Label>
-					{/* Show Error if any */}
-					{error.length > 0 ? <Text color={'red'}>{error}</Text> : null}
+					</Label> */}
+				{/* Show Error if any */}
+				{/* {error.length > 0 ? <Text color={'red'}>{error}</Text> : null}
 					<LoginBtn type='submit'>Log In</LoginBtn>
 				</Form>
 				<Text>
 					{"Don't have an account? "}{' '}
 					<SignUpLink href='/signup'>Signup</SignUpLink>
-				</Text>
+				</Text> */}
 			</Wrapper>
 		</Container>
 	);

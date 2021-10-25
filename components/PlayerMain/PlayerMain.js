@@ -19,14 +19,7 @@ import {
 const PlayerMain = () => {
 	return (
 		<Container>
-			<Welcome>
-				<ContentWrapper>
-					<Heading>Welcome to Keeplisning</Heading>
-					<SubHeading>No ads, No worries, Only music</SubHeading>
-				</ContentWrapper>
-				<Logo src='/images/logo.svg' />
-			</Welcome>
-			<Heading>Files</Heading>
+			<Heading>Welcome to KeepLisning</Heading>
 			{/* <MainContent>
 				<ActiveCard>
 					<SongImage src='/images/DefaultSongImage.png' alt='Song Image' />

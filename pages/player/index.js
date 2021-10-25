@@ -8,6 +8,9 @@ import Drop from '@/component/Drop/Drop';
 import PlayerMain from '@/component/PlayerMain/PlayerMain';
 import AudioPlayer from '@/component/AudioPlayer/AudioPlayer';
 
+// import isAuth from 'utils/HOC/isAuth';
+import useAuth from 'utils/Hooks/useAuth';
+
 import {
 	GridContainer,
 	SideBarContainer,
@@ -16,42 +19,32 @@ import {
 } from 'styles/Index.style';
 
 const Index = () => {
+	const [verifed, setVerifed] = useState(false);
 	const router = useRouter();
 	const code = router.query.code; // SpotifyCode
+	const accessToken = useAuth(code);
 
 	useEffect(() => {
-		if (code) {
-			axios
-				.post('/auth/login', {
-					code
-				})
-				.then((data) => console.log(data))
-				.catch((error) => console.log(error));
+		if (!accessToken) {
+			router.push('/login'); // Change url to /player
+		} else {
+			setVerifed(true);
 		}
-		router.push('/player'); // Change url to /player
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [code]);
-
-	// Home section or drop zone section
-	const [isHome, setIsHome] = useState(true);
-
-	const homeChangeHandler = (bool) => {
-		if (bool !== isHome) {
-			// don't change state is already on Home or DropZone section
-			setIsHome(bool);
-		}
-	};
+	}, [accessToken]);
 
 	return (
 		<GridContainer>
 			<SideBarContainer>
-				<Sidebar changeHome={homeChangeHandler} />
+				<Sidebar />
 			</SideBarContainer>
 			{/* <PlayerNavbarContainer>
 				<PlayerNavbar changeHome={homeChangeHandler} />
 			</PlayerNavbarContainer> */}
-			<MainContainer>{isHome ? <PlayerMain /> : <Drop />}</MainContainer>
-			<AudioPlayer currentSong={'/RaataanLambiyan.mp3'} />
+			<MainContainer>
+				{verifed ? <PlayerMain /> : <h2>Please Login</h2>}
+			</MainContainer>
+			<AudioPlayer currentSong={''} />
 		</GridContainer>
 	);
 };

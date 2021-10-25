@@ -38,6 +38,9 @@ const AudioPlayer = ({ currentSong }) => {
 
 	// Format Time in MM:SS
 	const calculateTime = (secs) => {
+		if (isNaN(secs)) {
+			return `0:00`;
+		}
 		const minutes = Math.floor(secs / 60);
 		const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
 		const seconds = Math.floor(secs % 60);
@@ -108,7 +111,11 @@ const AudioPlayer = ({ currentSong }) => {
 	return (
 		<AudioPlayerContainer>
 			<Wrapper>
-				<audio src={currentSong} preload='metadata' ref={audioPlayer}></audio>
+				{currentSong.length > 0 ? (
+					<audio src={currentSong} preload='metadata' ref={audioPlayer}></audio>
+				) : (
+					<audio src='/' preload='metadata' ref={audioPlayer}></audio>
+				)}
 				<ControlBtn onClick={repeatHandler}>
 					{onRepeat ? (
 						<MdRepeatOne style={controlBtnStyle} />
@@ -154,7 +161,8 @@ const AudioPlayer = ({ currentSong }) => {
 					/>
 				</ProgressBarWrapper>
 				{/* Duration */}
-				<Text>{duration && !isNaN(duration) && calculateTime(duration)}</Text>
+				{/* <Text>{duration && !isNaN(duration) && calculateTime(duration)}</Text> */}
+				<Text>{'00:00'}</Text>
 			</Wrapper>
 		</AudioPlayerContainer>
 	);

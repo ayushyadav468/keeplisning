@@ -15,25 +15,25 @@ import { RiDropFill } from 'react-icons/ri';
 // changeHome is a function to change Home and Drop sections
 // changeHome needs a boolean
 // to determine whether to change to Home or Drop section
-const Sidebar = ({ changeHome }) => {
-	const [isHome, setIsHome] = useState(true);
-	const [isDrop, setIsDrop] = useState(false);
+const Sidebar = () => {
+	// const [isHome, setIsHome] = useState(true);
+	// const [isDrop, setIsDrop] = useState(false);
 
-	const changeToHome = () => {
-		changeHome(true);
-		if (!isHome) {
-			setIsHome(true);
-			setIsDrop(false);
-		}
-	};
+	// const changeToHome = () => {
+	// 	changeHome(true);
+	// 	if (!isHome) {
+	// 		setIsHome(true);
+	// 		setIsDrop(false);
+	// 	}
+	// };
 
-	const changeToDrop = () => {
-		changeHome(false);
-		if (!isDrop) {
-			setIsDrop(true);
-			setIsHome(false);
-		}
-	};
+	// const changeToDrop = () => {
+	// 	changeHome(false);
+	// 	if (!isDrop) {
+	// 		setIsDrop(true);
+	// 		setIsHome(false);
+	// 	}
+	// };
 
 	return (
 		<Container>
@@ -43,28 +43,14 @@ const Sidebar = ({ changeHome }) => {
 				</LinkComponent>
 			</Link>
 			<Navbar>
-				{isHome ? (
-					<ActiveNavbarItem onClick={changeToHome}>
-						<FaHome style={{ width: '30px', height: '30px', color: 'white' }} />
-					</ActiveNavbarItem>
-				) : (
-					<NavbarItem onClick={changeToHome}>
-						<FaHome style={{ width: '30px', height: '30px', color: 'white' }} />
-					</NavbarItem>
-				)}
-				{isDrop ? (
-					<ActiveNavbarItem onClick={changeToDrop}>
-						<RiDropFill
-							style={{ width: '30px', height: '30px', color: 'white' }}
-						/>
-					</ActiveNavbarItem>
-				) : (
-					<NavbarItem onClick={changeToDrop}>
-						<RiDropFill
-							style={{ width: '30px', height: '30px', color: 'white' }}
-						/>
-					</NavbarItem>
-				)}
+				<ActiveNavbarItem>
+					<FaHome style={{ width: '30px', height: '30px', color: 'white' }} />
+				</ActiveNavbarItem>
+				<NavbarItem>
+					<RiDropFill
+						style={{ width: '30px', height: '30px', color: 'white' }}
+					/>
+				</NavbarItem>
 			</Navbar>
 			<Link href='/user' passHref>
 				<UserLink>

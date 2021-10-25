@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const NODE_ENV = process.env.NEXT_PUBLIC_NODE_ENV;
+
 const baseURL = (NODE_ENV) => {
 	if (NODE_ENV === 'production') {
 		return 'https://keeplisning-server.herokuapp.com/api/';
@@ -10,7 +11,7 @@ const baseURL = (NODE_ENV) => {
 };
 
 const instance = axios.create({
-	baseURL: baseURL()
+	baseURL: baseURL(NODE_ENV)
 });
 
 export default instance;
